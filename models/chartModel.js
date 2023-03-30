@@ -7,13 +7,20 @@ const chartSchema=new Schema({
         required:true,
         
     },
+
     year:{
         type:Number,
         required:true
     },
+
     amount:{
         type:Number,
         required:true,    
+    },
+
+    minBarLength:{
+          type:Number,
+          required:true,
     },
  
 },{timestamps:true})
@@ -21,3 +28,6 @@ const chartSchema=new Schema({
 //MODEL
 const ChartModel=mongoose.model('chart',chartSchema)
 module.exports=ChartModel
+
+
+// http://localhost:8000/chartdata
