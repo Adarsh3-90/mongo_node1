@@ -6,6 +6,9 @@ const connectDb=require('./config/connectdb')
 const userRoutes=require('./routes/userRoutes')
 const newsRoutes=require('./routes/newsRoutes')
 const ChartModel = require('./models/chartModel')
+
+const emplRoutes=require('./routes/emplRoutes');
+
 const cookieParser = require('cookie-parser')
 const axios=require('axios')
 
@@ -43,3 +46,4 @@ app.listen(port,()=>{
 
 app.use("/api/user",userRoutes)
 app.use("/api",newsRoutes)
+app.use("/api",emplRoutes);

@@ -7,4 +7,5 @@ router.post('/newsapi',newscontroller.api)
 router.get('/news',newscontroller.getData)
 
 
+
 module.exports=router
